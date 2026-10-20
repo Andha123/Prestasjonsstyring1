@@ -1,0 +1,32 @@
+{
+  "name": "prestasjonsstyring-eksamensapp",
+  "version": "1.0.0",
+  "description": "Læringsapp og eksamenssimulator i prestasjonsstyring (BØK3561)",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/gen-content.mjs && node scripts/build.mjs",
+    "typecheck": "tsc -p .",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test && npm run build",
+    "content": "node scripts/gen-content.mjs",
+    "e2e": "node tests/e2e/run.mjs && node tests/e2e/account.mjs"
+  },
+  "keywords": [],
+  "author": "Andreas Sandnes",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "docx": "^9.5.1",
+    "esbuild": "^0.24.0",
+    "happy-dom": "^15.11.7",
+    "jszip": "^3.10.1",
+    "mammoth": "^1.6.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^3.11.174",
+    "playwright": "^1.56.0",
+    "preact": "^10.24.3",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  },
+  "private": true,
+  "type": "module"
+}
